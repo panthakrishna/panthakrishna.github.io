@@ -1,0 +1,712 @@
+html {
+  font-family: "candara", "sans-serif";
+}
+
+/* To take away unwanted margin from grid layout */
+body{
+  margin: 0;
+  
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact:hover, .logo:hover, 
+.projects:hover, .experience:hover,
+.aboutmebutton:hover {
+    background-color: #0099cc;
+}
+
+.arrow:hover {
+  padding-top: 2px;
+  background-color: #0099cc;
+}
+
+.awards:hover, .awards1:hover {
+  padding-top: 1px;
+  
+}
+
+.main {
+  margin-left: 8px;
+
+  display: grid;
+  grid-template-rows: 76vh;
+}
+
+#homedetail, #awardsdetail {
+  margin-left: 50px;
+}
+
+#contactdetail {
+  margin-left: 50px;
+  margin-right: 50px;
+    
+}
+
+.contact_name, .contact_email, .contact_subject,
+.contact_subject, .contact_message {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.contact_submit {
+  width: 100%;
+  height: 27px;
+
+  padding: 5px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
+}
+
+.contact_submit:hover
+{
+  background-color: #0099cc;
+  cursor: pointer;
+}
+
+#awardsdetail li {
+  margin-bottom: 25px;
+  margin-right: 75px;
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: left;
+  font-size: 12px;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: 43px auto;
+  
+}
+
+.skillstitle, .educationtitle, 
+.languagetitle {
+  text-decoration: none;
+  color: #ffffff;    
+}
+
+.skillstitle:hover, .educationtitle:hover, 
+.languagetitle:hover {
+  color: #ecf3f3 ;
+  /* text-decoration-line: underline; */
+}
+
+.footerArrow  {
+  margin-top: 150px;
+  margin-left: 25px;
+}
+
+.footerContent {
+  margin-left: 15px;
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+/* To make the skills, education in order*/
+.genlangtitle, .weblangtitle, .otherstitle,
+.masterstitle, .bachelorstitle, .disprogtitle,
+.languages {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.genlang, .weblang, .disprog, .others,
+.mastersdatenper, .bachelorsdatenper {
+    margin-bottom: 18px;
+}
+
+  .others ul {
+    margin: 0;
+   }
+   
+   .otherstitle1 {
+    position: absolute;
+    right: 0px;
+    top: 47vh;
+    }
+
+/*For responsive*/
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*To display snackbar popup for message sent*/
+#message_sent {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  font-size: 17px;
+}
+
+#message_sent.show {
+  visibility: visible;
+}
+
+#message_error {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  font-size: 17px;
+}
+
+#message_error.show {
+  visibility: visible;
+}
+
+
+/*For very small devices, like my mobile*/
+/*less than or equal to given pixel for max*/
+@media only screen and (max-width: 369px) {
+    
+  /* Dividing into 3 rows */
+  .grid-container {
+      display: grid;
+      grid-template-rows: 37px 43px auto;
+
+  }
+
+  .menu {
+      height: 37px;
+      background-color: #33b5e5;
+  }
+
+  .contact, .logo, .projects, .experience,
+  .aboutmebutton {
+      padding: 8px;
+      background-color: #33b5e5;
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      text-align: center;
+      width: auto;
+      text-decoration: none;
+      float: left;
+  }
+
+  .menu li{
+      margin-right: 1px;
+      margin-left: 1px;
+      background-color: #33b5e5;
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      text-align: center;
+      width: auto;
+      text-decoration: none;
+      float: left;    
+  }
+
+  .up {
+      float: left;
+  }
+
+  .middle {
+      position: absolute;
+      left: 12%;
+      
+  }
+
+  .down {
+      float: right;
+  }
+  
+  .content {
+      display: grid;
+      grid-template-rows: 77.80vh;
+  
+  }
+
+  .awards {
+      visibility: hidden;
+  }
+
+  .awards1 {
+      position: absolute;
+      right: 0px;
+      top: 78.90vh;
+      border-top-left-radius: 17px;
+      border-top-right-radius: 17px;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      overflow: hidden;
+  }
+
+  .main {
+      
+      margin-right: 8px;
+      
+  }
+
+  .details {
+    height: 76vh;
+    overflow: auto;
+  }
+
+  #keywords {
+    margin-left: 20px;
+    overflow: hidden;
+  }
+
+    /*Not to have Tooltip in other devices except, large ones*/
+    .logo .logotooltiptext,
+    .aboutmebutton .aboutmebuttontooltiptext,
+    .projects .projectstooltiptext,
+    .experience .experiencetooltiptext,
+    .contact .contacttooltiptext {
+        visibility: hidden;
+        /* Position the tooltip text */
+        position: absolute;
+        /*z-index: 1;*/
+    }
+    /*Not to have Tooltip in other devices except, large ones_code upto here*/  
+
+     /*Title at different places in other devices compared to large devices*/
+     #hometitle, #awardstitle {
+      /* margin: 12px 40px 40px; */
+      margin-left: 20px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+  
+    #aboutmetitle, #projectstitle, 
+    #experiencetitle {
+      margin-bottom: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    #contacttitle {
+      margin-top: 40px; 
+      margin-bottom: 10px;
+      margin-left: 50px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    /*Upto here _Title at different places in other devices compared to large devices*/
+
+    /*Home, awardsdetail according to title aligned only in small and medium devices*/
+    #homedetail, #awardsdetail {
+      margin-left: 20px;
+    }
+    /*Upto here_Home, awardsdetail according to title aligned only in small and medium devices*/
+  }
+
+
+/* For medium devices (phones, 370px to 880px) */
+/*within this specific range*/
+@media only screen and (max-width: 880px) and 
+(min-width:370px) {
+    
+    /* Dividing into 3 rows */
+    .grid-container {
+        display: grid;
+        grid-template-rows: 37px 43px auto;
+    }
+
+    .menu {
+        height: 37px;
+        background-color: #33b5e5;
+    }
+
+    .contact, .logo, .projects, .experience,
+    .aboutmebutton {
+        padding: 8px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        text-align: center;
+        width: auto;
+        text-decoration: none;
+        float: left;
+    }
+
+    /* To change the content */
+    .logo span{
+      display: none;
+    }
+    .logo:after{
+      content: '';
+    }
+    .aboutmebutton span{
+      display: none;
+    }
+    .aboutmebutton:after{
+      content: 'Myself';
+    }
+
+    .projects span{
+        display: none;
+    }
+    .projects:after{
+        content: 'Works';
+    }
+
+    .experience span{
+        display: none;
+    }
+    .experience:after{
+        content: 'Jobs';
+    }
+
+    .contact span{
+        display: none;
+    }
+    .contact:after{
+        content: 'Email';
+    }
+
+    .menu li{
+        margin-right: 1px;
+        margin-left: 1px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        text-align: center;
+        width: auto;
+        text-decoration: none;
+        float: left;    
+    }
+
+    .up {
+        float: left;
+    }
+
+    .middle {
+        position: absolute;
+        left: 12%;       
+    }
+
+    .down {
+        float: right;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-rows: 77.80vh;  
+    }
+
+    .awards {
+        visibility: hidden;
+    }
+
+    .awards1 {
+        position: absolute;
+        right: 0px;
+        top: 78.90vh;
+        border-top-left-radius: 17px;
+        border-top-right-radius: 17px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        overflow: hidden;
+    }
+
+    .main {
+        margin-right: 8px;
+    }
+
+    .details {
+      height: 76vh;
+      overflow: auto;
+    }
+
+    #keywords {
+      margin-left: 20px;
+      overflow: hidden;
+    }
+
+    /*Not to have Tooltip in other devices except, large ones*/
+    .logo .logotooltiptext,
+    .aboutmebutton .aboutmebuttontooltiptext,
+    .projects .projectstooltiptext,
+    .experience .experiencetooltiptext,
+    .contact .contacttooltiptext {
+        visibility: hidden;
+        /* Position the tooltip text */
+        position: absolute;
+        /*z-index: 1;*/
+    }
+    /*Not to have Tooltip in other devices except, large ones_code upto here*/
+
+    /*Title at different places in other devices compared to large devices*/
+    #hometitle, #awardstitle {
+      /* margin: 12px 40px 40px; */
+      margin-left: 20px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+  
+    #aboutmetitle, #projectstitle, 
+    #experiencetitle {
+      margin-bottom: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    #contacttitle {
+      margin-top: 40px; 
+      margin-bottom: 10px;
+      margin-left: 50px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    /*Upto here _Title at different places in other devices compared to large devices*/
+
+    /*Home, awardsdetail according to title aligned only in small and medium devices*/
+    #homedetail, #awardsdetail {
+      margin-left: 20px;
+    }
+    /*Upto here_Home, awardsdetail according to title aligned only in small and medium devices*/
+
+}
+
+/* For large devices more than 881px */
+/*greater than or equal to given pixel for min*/
+@media only screen and (min-width: 881px) {
+  /* Dividing into 2 columns */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 43px auto;    
+  }
+
+  .menu {
+    height: 100%;
+    background-color: #33b5e5;
+	  display: grid;
+	  grid-template-rows: 55vh 39vh;
+  }
+
+    .menu li, .contact, .logo, .projects,
+    .experience/*, .aboutmebutton*/ {
+        border: none;
+        text-decoration: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        padding: 4px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 1px;
+    }
+
+    .aboutmebutton {
+        border: none;
+        text-decoration: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        padding: 4px 7px 4px 7px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 1px;     
+    }
+    
+  .content {
+    display: grid;
+    grid-template-rows: 55vh;
+  }
+
+  .awards {
+    position: absolute;
+    right: 0px;
+    top: 47vh;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+  }  
+
+  .awards1{
+    visibility: hidden;
+  }
+
+  #keywords {
+    margin-left: 300px;
+    margin-top: 45px;
+    overflow: hidden;
+  }
+
+  .details {
+    padding-right: 15px;
+    text-align: justify;
+    height: 54vh;
+    overflow: auto;
+  }
+
+  .homekeywordscontainer {
+    display: grid;
+    grid-template-columns: 450px auto;
+  }
+
+  .genwebnoth {
+    display: grid;
+    grid-template-columns: 400px auto;
+  }
+
+    /* For the tool tip texts on buttons*/
+    /* Tooltip will be placed on right side of the buttons for this large size*/
+    .logo, .aboutmebutton,
+    .projects, .experience,
+    .contact {
+        position: relative;
+    }
+
+    .logo .logotooltiptext,
+    .aboutmebutton .aboutmebuttontooltiptext,
+    .projects .projectstooltiptext,
+    .experience .experiencetooltiptext {
+        visibility: hidden;
+        color: black;
+        text-align: center;
+        padding: 1px 2px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        left: 127%;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 16px;
+    }
+
+        /* Tooltip arrow */
+        .logo .logotooltiptext::after,
+        .aboutmebutton .aboutmebuttontooltiptext::after,
+        .projects .projectstooltiptext::after,
+        .experience .experiencetooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 17px;
+            right: 100%;
+            /* To the left of the tooltip */
+            margin-top: -5px;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent #0099cc transparent transparent;
+        }
+
+    /*For Contact tooltiptext to position upward*/
+    .contact .contacttooltiptext {
+        visibility: hidden;
+        color: black;
+        text-align: center;
+        padding: 1px 1px;
+        left: 135%;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 16px;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: -110px;
+        
+    }
+
+        /* Tooltip arrow for contact*/
+        .contact .contacttooltiptext::after {
+            content: " ";
+            position: absolute;
+            bottom: 0px;
+            right: 100%;
+            /* To the left of the tooltip */
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #0099cc transparent transparent;
+        }
+
+    /* Show the tooltip text when your mouse is over the tooltip container */
+    .logo:hover .logotooltiptext,
+    .aboutmebutton:hover .aboutmebuttontooltiptext,
+    .projects:hover .projectstooltiptext,
+    .experience:hover .experiencetooltiptext,
+    .contact:hover .contacttooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    /*Tooltip code upto here*/
+
+    /*Put some margin space on the content*/
+    #aboutmedetail, #projectsdetail,
+    #experiencedetail {
+/*        margin-left: 16px;*/
+        margin-left: 50px;
+        margin-right: 60px;
+    }
+
+    #contactdetail {
+        /*        margin-left: 16px;*/
+        margin-right: 60px;
+    }
+    /*Upto here_Put some margin space on the content*/
+
+    /*icon for buttons*/
+    .logoicon {
+        height: 25px;
+        width: 25px;
+    }
+
+    /*Title at different places in other devices compared to large devices*/
+    #hometitle, #awardstitle  {
+      /* margin-top: 40px;
+      margin: 40px 40px 40px; */
+      margin-top: 40px;
+      margin-left: 50px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    #aboutmetitle, #projectstitle,
+    #experiencetitle {
+        /*margin-left: 16px;*/
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 60px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+  
+    #contacttitle {
+      margin-top: 40px; 
+      margin-bottom: 10px;
+      margin-left: 50px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    /*Upto here _Title at different places in other devices compared to large devices*/
+}
+
