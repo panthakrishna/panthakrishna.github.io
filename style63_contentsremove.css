@@ -119,9 +119,14 @@ body{
     font-weight: bold;
 }
 
+.mastersuni {
+    font-size: 16px;
+}
+
 .genlang, .weblang, .disprog, .others,
 .mastersdatenper, .bachelorsdatenper {
     margin-bottom: 18px;
+    font-size: 16px;
 }
 
   .others ul {
